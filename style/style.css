@@ -1,0 +1,97 @@
+* {
+  font-family: Tahoma; }
+
+.header, .main, .footer {
+  padding: 0 calc(50% - 1000px); }
+
+.header {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+  .header__top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 30px calc(50% - 700px) 30px; }
+    .header__top .logo {
+      max-width: 100px; }
+      .header__top .logo img {
+        max-width: 100%; }
+  .header__title, .header__sub-title {
+    letter-spacing: -1px;
+    font-size: 22px;
+    padding: 0 15px;
+    line-height: 30px; }
+  .header__title {
+    border-right: 2px solid #000000;
+    text-align: center; }
+  .header__body .menu {
+    background: #17b167;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .header__body .menu a {
+      text-transform: uppercase;
+      font-size: 22px;
+      color: #fff;
+      display: inline-block;
+      padding: 30px 15px; }
+      .header__body .menu a:active {
+        background: #084025;
+        color: gray;
+        -webkit-transition: 0.4s;
+        -o-transition: 0.4s;
+        transition: 0.4s; }
+    .header__body .menu a:hover, .header__body .menu .active-link {
+      background: #cef9e4;
+      color: #17b167;
+      -webkit-transition: 0.4s;
+      -o-transition: 0.4s;
+      transition: 0.4s; }
+  .header__body .slider {
+    color: #fff;
+    position: relative; }
+    .header__body .slider .slide {
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      height: calc(100vh - 260px); }
+    .header__body .slider .slide1 {
+      background-image: url(../img/slide-photo-cut.jpg); }
+    .header__body .slider .slide2 {
+      background-image: url(../img/slide-photo.jpg); }
+    .header__body .slider .slickArrow {
+      position: absolute;
+      z-index: 100;
+      cursor: pointer;
+      opacity: 0.7;
+      -webkit-transition: 0.4s;
+      -o-transition: 0.4s;
+      transition: 0.4s;
+      background: #fff;
+      text-align: center;
+      border-radius: 50%; }
+      .header__body .slider .slickArrow:hover {
+        opacity: 1; }
+      .header__body .slider .slickArrow i {
+        font-size: 60px;
+        color: #17b167; }
+    .header__body .slider .slickPrev {
+      top: calc(50% - 35px);
+      width: 70px;
+      left: 30px; }
+    .header__body .slider .slickNext {
+      top: calc(50% - 35px);
+      width: 70px;
+      right: 30px; }

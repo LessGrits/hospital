@@ -1,0 +1,111 @@
+$main-color: #17b167;
+
+*{
+  font-family: Tahoma;
+}
+
+
+.header, .main, .footer{
+  padding: 0 calc(50% - 1000px);
+}
+
+.header{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  &__top{
+    display: flex;
+    align-items: center;
+    padding: 30px calc(50% - 700px) 30px;
+    .logo{
+      max-width: 100px;
+      img{
+        max-width: 100%;
+      }
+    }
+  }
+  &__title,&__sub-title{
+    letter-spacing: -1px;
+    font-size: 22px;
+    padding: 0 15px;
+    line-height: 30px;
+
+  }
+  &__title{
+  border-right: 2px solid #000000;
+    text-align: center;
+  }
+
+  &__body{
+    
+    .menu{
+      background: $main-color;
+      display: flex;
+      justify-content: center;
+      a{
+        text-transform: uppercase;
+        font-size: 22px;
+        color: #fff;
+        display: inline-block;
+        padding: 30px 15px;
+
+        &:active{
+          background: darken($main-color, 25%);
+          color: darken(#fff, 50%);
+          transition: 0.4s;
+        }
+      }
+      a:hover, .active-link{
+        background: lighten($main-color, 50%);
+        color:$main-color;
+        transition: 0.4s;
+      }
+    }
+    
+    .slider{
+      color:#fff;
+      position: relative;
+
+      .slide{
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: calc(100vh - 260px);
+      }
+      .slide1{
+        background-image: url(../img/slide-photo-cut.jpg);
+      }
+      .slide2{
+        background-image: url(../img/slide-photo.jpg);
+      }
+      .slickArrow{
+        position: absolute;
+        z-index: 100;
+        cursor: pointer;
+        opacity: 0.7;
+        transition: 0.4s;
+        background: #fff;
+        text-align: center;
+        border-radius: 50%;
+        &:hover{
+          opacity: 1;
+        }
+
+        i{
+          font-size: 60px;
+          color:$main-color;
+        }
+      }
+      .slickPrev{
+          top:calc(50% - 35px);
+          width: 70px;
+          left:30px;
+        }
+      .slickNext{
+        top:calc(50% - 35px);
+        width: 70px;
+        right:30px;
+      }
+    }
+  }
+}
