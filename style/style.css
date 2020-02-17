@@ -14,7 +14,7 @@
   border-radius: 30px;
   color: #fff; }
   .main-btn:hover {
-    background: #17b167;
+    background: #48a219;
     -webkit-transition: 0.4s;
     -o-transition: 0.4s;
     transition: 0.4s; }
@@ -49,7 +49,7 @@
     border-right: 2px solid #000000;
     text-align: center; }
   .header__body .menu {
-    background: #17b167;
+    background: #48a219;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -63,14 +63,14 @@
       display: inline-block;
       padding: 30px 15px; }
       .header__body .menu a:active {
-        background: #084025;
+        background: #173408;
         color: gray;
         -webkit-transition: 0.4s;
         -o-transition: 0.4s;
         transition: 0.4s; }
     .header__body .menu a:hover, .header__body .menu .active-link {
-      background: #cef9e4;
-      color: #17b167;
+      background: #d5f6c4;
+      color: #48a219;
       -webkit-transition: 0.4s;
       -o-transition: 0.4s;
       transition: 0.4s; }
@@ -121,7 +121,7 @@
         opacity: 1; }
       .header__body .slider .slickArrow i {
         font-size: 60px;
-        color: #17b167; }
+        color: #48a219; }
     .header__body .slider .slickPrev {
       top: calc(50% - 35px);
       width: 70px;
@@ -133,7 +133,7 @@
 
 .main .section-header {
   font-size: 40px;
-  color: #17b167;
+  color: #48a219;
   text-align: center;
   padding: 100px 50px;
   font-weight: bold; }
