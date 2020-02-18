@@ -1,9 +1,15 @@
 //$main-color: #17b167;
-$main-color: #48a219;
+$main-color: #388e3c;
+$grey-color:#808080;
 *{
-  font-family: Tahoma;
+  font-family: "Roboto Light";
+
 }
 
+h1,h2,h3,h4,h5{
+  font-family: 'Lato', sans-serif;
+  color:#000000;
+}
 
 .header, .main, .footer{
   padding: 0 calc(50% - 1000px);
@@ -15,7 +21,7 @@ $main-color: #48a219;
   line-height: 20px;
   margin: 0 auto;
   padding: 15px 40px;
-  background: #808080;
+  background: $grey-color;
   border-radius: 30px;
   color: #fff;
 
@@ -26,20 +32,121 @@ $main-color: #48a219;
 }
 
 .header{
+
   height: 100vh;
   display: flex;
   flex-direction: column;
-  &__top{
+  
+  &-top{
+    position: relative;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    padding: 30px calc(50% - 700px) 30px;
-    .logo{
-      max-width: 100px;
-      img{
-        max-width: 100%;
+    justify-content: center;
+    padding: 0 calc(50% - 1000px) 20px;
+    
+    
+    .contact-info{
+      padding: 5px calc(50% - 700px)  ;
+      display: flex;
+      width: 100%;
+      background: $grey-color;
+      justify-content: space-between;
+      align-items: center;
+      color: cornsilk;
+
+      &__phone{
+        &:before{
+          font-family: iconmonstr-iconic-font;
+          content:'\e06d';
+        }
+      }
+
+      &__email{
+        display: block;
+        vertical-align: center;
+        position: relative;
+        &:before{
+          font-family: iconmonstr-iconic-font;
+          content:'\e047';
+          position: absolute;
+          top:0;
+          left: -10px;
+        }
+      }
+
+
+      &__right{
+        display: flex;
+        align-items: center;
+        a{
+          color: #fff;
+          cursor: pointer;
+          padding: 0 10px;
+          &:hover{
+            font-size: 16px;
+            transition: 0.3s;
+          }
+        }
+        i{
+          padding: 3px 3px 0 0;
+        }
+        i:hover{
+          font-size: 27px;
+          padding: 0;
+          transition: 0.5s;
+        }
       }
     }
-  }
+    &__body{
+      padding-top: 10px;
+      display: flex;
+
+      .logo{
+        width: 80px;
+        img{
+          max-width: 100%;
+        }
+      }
+
+      .menu{
+        display: flex;
+        justify-content: center;
+        padding-left: 50px;
+        a{
+          text-transform: uppercase;
+          font-size: 16px;
+          font-weight: bold;
+          color: #424242;
+          display: inline-block;
+          padding: 30px 15px;
+
+          //&:active{
+          //  background: darken($main-color, 25%);
+          //  color: darken(#fff, 50%);
+          //  transition: 0.4s;
+          //}
+        }
+        a:hover, .active-link{
+          //background: lighten($main-color, 50%);
+          color:$main-color;
+          transition: 0.5s;
+        }
+      }
+
+      &:after{
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 10px;
+        background: #8080802e;
+        height: 1px;
+        width: 100vw;
+      }
+    }
+    }
+
+  
   &__title,&__sub-title{
     letter-spacing: -1px;
     font-size: 22px;
@@ -53,31 +160,6 @@ $main-color: #48a219;
   }
 
   &__body{
-    
-    .menu{
-      background: $main-color;
-      display: flex;
-      justify-content: center;
-      a{
-        text-transform: uppercase;
-        font-size: 22px;
-        color: #fff;
-        display: inline-block;
-        padding: 30px 15px;
-
-        &:active{
-          background: darken($main-color, 25%);
-          color: darken(#fff, 50%);
-          transition: 0.4s;
-        }
-      }
-      a:hover, .active-link{
-        background: lighten($main-color, 50%);
-        color:$main-color;
-        transition: 0.4s;
-      }
-    }
-    
     .slider{
       color:#fff;
       position: relative;
@@ -127,7 +209,7 @@ $main-color: #48a219;
         position: absolute;
         z-index: 100;
         cursor: pointer;
-        opacity: 0.7;
+        opacity: 0.5;
         transition: 0.4s;
         text-align: center;
         &:hover{
@@ -136,7 +218,7 @@ $main-color: #48a219;
 
         i{
           font-size: 60px;
-          color:$main-color;
+          color: #424242;
         }
       }
       .slickPrev{
@@ -153,19 +235,40 @@ $main-color: #48a219;
   }
 }
 .main{
+ .background-section{
+   background-color: #f5f5f5;
+ }
+
   .section-header{
     font-size: 40px;
-    color: $main-color;
     text-align: center;
     padding: 100px 50px;
     font-weight: bold;
   }
+
+  .about-us{
+    padding-bottom: 100px;
+
+    &__body{
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+    &__img{
+      width: 50%;
+      max-width: 600px;
+    }
+    &__text{
+      max-width: 600px;
+      color: black;
+      text-align: justify;
+      width: 40%;
+      font-size: 22px;
+    }
+  }
+
   .section-text{
-    margin: 0 auto;
-    text-align: justify;
-    max-width: 1000px;
-    color: dimgrey;
-    font-size: 20px;
+
   }
 
 
@@ -191,7 +294,7 @@ padding-bottom: 100px;
         &:hover{
           .service__title{
             transition: 0.4s;
-            color:#37b53c;
+            color:$main-color;
           }
         }
 

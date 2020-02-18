@@ -1,5 +1,9 @@
 * {
-  font-family: Tahoma; }
+  font-family: "Roboto Light"; }
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Lato', sans-serif;
+  color: #000000; }
 
 .header, .main, .footer {
   padding: 0 calc(50% - 1000px); }
@@ -14,7 +18,7 @@
   border-radius: 30px;
   color: #fff; }
   .main-btn:hover {
-    background: #48a219;
+    background: #388e3c;
     -webkit-transition: 0.4s;
     -o-transition: 0.4s;
     transition: 0.4s; }
@@ -28,18 +32,110 @@
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column; }
-  .header__top {
+  .header-top {
+    position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    padding: 30px calc(50% - 700px) 30px; }
-    .header__top .logo {
-      max-width: 100px; }
-      .header__top .logo img {
-        max-width: 100%; }
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 0 calc(50% - 1000px) 20px; }
+    .header-top .contact-info {
+      padding: 5px calc(50% - 700px);
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      width: 100%;
+      background: #808080;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      color: cornsilk; }
+      .header-top .contact-info__phone:before {
+        font-family: iconmonstr-iconic-font;
+        content: '\e06d'; }
+      .header-top .contact-info__email {
+        display: block;
+        vertical-align: center;
+        position: relative; }
+        .header-top .contact-info__email:before {
+          font-family: iconmonstr-iconic-font;
+          content: '\e047';
+          position: absolute;
+          top: 0;
+          left: -10px; }
+      .header-top .contact-info__right {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center; }
+        .header-top .contact-info__right a {
+          color: #fff;
+          cursor: pointer;
+          padding: 0 10px; }
+          .header-top .contact-info__right a:hover {
+            font-size: 16px;
+            -webkit-transition: 0.3s;
+            -o-transition: 0.3s;
+            transition: 0.3s; }
+        .header-top .contact-info__right i {
+          padding: 3px 3px 0 0; }
+        .header-top .contact-info__right i:hover {
+          font-size: 27px;
+          padding: 0;
+          -webkit-transition: 0.5s;
+          -o-transition: 0.5s;
+          transition: 0.5s; }
+    .header-top__body {
+      padding-top: 10px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      .header-top__body .logo {
+        width: 80px; }
+        .header-top__body .logo img {
+          max-width: 100%; }
+      .header-top__body .menu {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        padding-left: 50px; }
+        .header-top__body .menu a {
+          text-transform: uppercase;
+          font-size: 16px;
+          font-weight: bold;
+          color: #424242;
+          display: inline-block;
+          padding: 30px 15px; }
+        .header-top__body .menu a:hover, .header-top__body .menu .active-link {
+          color: #388e3c;
+          -webkit-transition: 0.5s;
+          -o-transition: 0.5s;
+          transition: 0.5s; }
+      .header-top__body:after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 10px;
+        background: #8080802e;
+        height: 1px;
+        width: 100vw; }
   .header__title, .header__sub-title {
     letter-spacing: -1px;
     font-size: 22px;
@@ -48,32 +144,6 @@
   .header__title {
     border-right: 2px solid #000000;
     text-align: center; }
-  .header__body .menu {
-    background: #48a219;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center; }
-    .header__body .menu a {
-      text-transform: uppercase;
-      font-size: 22px;
-      color: #fff;
-      display: inline-block;
-      padding: 30px 15px; }
-      .header__body .menu a:active {
-        background: #173408;
-        color: gray;
-        -webkit-transition: 0.4s;
-        -o-transition: 0.4s;
-        transition: 0.4s; }
-    .header__body .menu a:hover, .header__body .menu .active-link {
-      background: #d5f6c4;
-      color: #48a219;
-      -webkit-transition: 0.4s;
-      -o-transition: 0.4s;
-      transition: 0.4s; }
   .header__body .slider {
     color: #fff;
     position: relative; }
@@ -112,7 +182,7 @@
       position: absolute;
       z-index: 100;
       cursor: pointer;
-      opacity: 0.7;
+      opacity: 0.5;
       -webkit-transition: 0.4s;
       -o-transition: 0.4s;
       transition: 0.4s;
@@ -121,7 +191,7 @@
         opacity: 1; }
       .header__body .slider .slickArrow i {
         font-size: 60px;
-        color: #48a219; }
+        color: #424242; }
     .header__body .slider .slickPrev {
       top: calc(50% - 35px);
       width: 70px;
@@ -131,19 +201,36 @@
       width: 70px;
       right: 30px; }
 
+.main .background-section {
+  background-color: #f5f5f5; }
+
 .main .section-header {
   font-size: 40px;
-  color: #48a219;
   text-align: center;
   padding: 100px 50px;
   font-weight: bold; }
 
-.main .section-text {
-  margin: 0 auto;
-  text-align: justify;
-  max-width: 1000px;
-  color: dimgrey;
-  font-size: 20px; }
+.main .about-us {
+  padding-bottom: 100px; }
+  .main .about-us__body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .main .about-us__img {
+    width: 50%;
+    max-width: 600px; }
+  .main .about-us__text {
+    max-width: 600px;
+    color: black;
+    text-align: justify;
+    width: 40%;
+    font-size: 22px; }
 
 .main .services {
   display: -webkit-box;
@@ -176,7 +263,7 @@
         -webkit-transition: 0.4s;
         -o-transition: 0.4s;
         transition: 0.4s;
-        color: #37b53c; }
+        color: #388e3c; }
       .main .services__body .service__img {
         display: block;
         margin: 0 auto; }
