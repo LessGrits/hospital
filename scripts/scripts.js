@@ -1,10 +1,10 @@
 const menu = document.querySelector('.header-top__body');
-const body = document.body;
+const contactInfo = document.querySelector('.contact-info');
 
-addEventListener("scroll", ()=>{
+addEventListener("scroll", ()=> {
     const scrolled = document.scrollingElement.scrollTop;
     const position = menu.offsetTop;
-    scrolled >= position && menu.classList.add('fixed');
-    scrolled === 0 && menu.classList.remove('fixed');
+    scrolled >= position + 10 && (menu.classList.add('fixed') , contactInfo.classList.add('hidden'));
+    scrolled === 0 && (menu.classList.remove('fixed') , contactInfo.classList.remove('hidden'));
 });
 
