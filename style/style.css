@@ -47,7 +47,7 @@ h1, h2, h3, h4, h5 {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    padding: 0 calc(50% - 1000px) 20px; }
+    padding: 0 calc(50% - 1000px); }
     .header-top .contact-info {
       padding: 5px calc(50% - 700px);
       display: -webkit-box;
@@ -100,13 +100,28 @@ h1, h2, h3, h4, h5 {
           -o-transition: 0.5s;
           transition: 0.5s; }
     .header-top__body {
-      padding-top: 10px;
       display: -webkit-box;
       display: -ms-flexbox;
-      display: flex; }
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      padding: 10px 0 20px;
+      z-index: 1000;
+      background: #fff;
+      width: 100%; }
+      .header-top__body:after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 10px;
+        background: #8080802e;
+        height: 1px;
+        width: 100vw; }
       .header-top__body .logo {
         width: 80px; }
         .header-top__body .logo img {
+          display: block;
           max-width: 100%; }
       .header-top__body .menu {
         display: -webkit-box;
@@ -122,20 +137,24 @@ h1, h2, h3, h4, h5 {
           font-weight: bold;
           color: #424242;
           display: inline-block;
-          padding: 30px 15px; }
+          padding: 30px 0.7vw;
+          position: relative; }
         .header-top__body .menu a:hover, .header-top__body .menu .active-link {
           color: #388e3c;
-          -webkit-transition: 0.5s;
-          -o-transition: 0.5s;
-          transition: 0.5s; }
-      .header-top__body:after {
-        content: '';
-        display: block;
-        position: absolute;
-        bottom: 10px;
-        background: #8080802e;
-        height: 1px;
-        width: 100vw; }
+          -webkit-transition: 1s;
+          -o-transition: 1s;
+          transition: 1s; }
+          .header-top__body .menu a:hover:before, .header-top__body .menu .active-link:before {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: 20px;
+            width: 70%;
+            height: 2px;
+            background: #388e3c; }
+    .header-top .fixed {
+      position: fixed;
+      top: 0; }
   .header__title, .header__sub-title {
     letter-spacing: -1px;
     font-size: 22px;
@@ -216,8 +235,6 @@ h1, h2, h3, h4, h5 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: space-evenly;
-    -ms-flex-pack: space-evenly;
     justify-content: space-evenly;
     -webkit-box-align: center;
     -ms-flex-align: center;
