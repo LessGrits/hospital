@@ -56,7 +56,7 @@ h1, h2, h3, h4, h5 {
       background: $grey-color;
       justify-content: space-between;
       align-items: center;
-      color: cornsilk;
+      color: #fff;
       opacity: 1;
       height: 40px;
       //transition: 1s;
@@ -309,7 +309,7 @@ h1, h2, h3, h4, h5 {
       top: 65%;
       height: 5px;
       width: 6vw;
-      background: #388e3c;
+      background: lighten($main-color,15%);
       left: calc(50% - 3vw);
     }
   }
@@ -465,12 +465,20 @@ h1, h2, h3, h4, h5 {
       margin: 5vh auto 0;
       display: flex;
       flex-direction: column;
-      width: 30vw;
+      width: 20vw;
+
+
+    /*  input:focus:invalid, .choose_form select:focus:invalid{
+        background: #fff;
+        box-shadow: 0 0 5px #d45252;
+        border-color: #b03535;
+      }
+      */
+
 
 
       label{
         font-size: 18px;
-        font-weight: bold;
         display: flex;
         flex-direction: column;
         color: #000000;
@@ -496,10 +504,18 @@ h1, h2, h3, h4, h5 {
       textarea{
 
       }
+      .main-btn{
+        margin-top: 20px;
+      }
     }
   }
 }
 .footer{
   padding: 20px 0 20px 20vw;
   background: $grey-color;
+
+  p{
+    color: #fff;
+    font-size: 17px;
+  }
 }

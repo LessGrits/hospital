@@ -65,7 +65,7 @@ h1, h2, h3, h4, h5 {
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center;
-      color: cornsilk;
+      color: #fff;
       opacity: 1;
       height: 40px; }
       .header-top .contact-info__phone:before {
@@ -251,7 +251,7 @@ h1, h2, h3, h4, h5 {
     top: 65%;
     height: 5px;
     width: 6vw;
-    background: #388e3c;
+    background: #56bc5b;
     left: calc(50% - 3vw); }
 
 .main .about-us {
@@ -392,10 +392,15 @@ h1, h2, h3, h4, h5 {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    width: 30vw; }
+    width: 20vw;
+    /*  input:focus:invalid, .choose_form select:focus:invalid{
+        background: #fff;
+        box-shadow: 0 0 5px #d45252;
+        border-color: #b03535;
+      }
+      */ }
     .main .contact-us .form label {
       font-size: 18px;
-      font-weight: bold;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -418,7 +423,12 @@ h1, h2, h3, h4, h5 {
         border: 2px solid #68c46d;
         -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
         box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6); }
+    .main .contact-us .form .main-btn {
+      margin-top: 20px; }
 
 .footer {
   padding: 20px 0 20px 20vw;
   background: #808080; }
+  .footer p {
+    color: #fff;
+    font-size: 17px; }
