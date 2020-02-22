@@ -1,8 +1,12 @@
 //$main-color: #17b167;
 $main-color: #388e3c;
 $grey-color: #808080;
-* {
-  font-family: "Poppins";
+
+*{
+  outline: none;
+}
+p,label {
+  font-family: 'PT Sans', sans-serif;
 }
 
 h1, h2, h3, h4, h5 {
@@ -32,9 +36,9 @@ h1, h2, h3, h4, h5 {
 
 .header {
   transition: 1s;
-  height: 100vh;
   display: flex;
   flex-direction: column;
+
 
   &-top {
     position: relative;
@@ -43,7 +47,6 @@ h1, h2, h3, h4, h5 {
     align-items: center;
     justify-content: center;
     padding: 0 calc(50% - 1000px);
-
 
 
     .contact-info {
@@ -55,7 +58,8 @@ h1, h2, h3, h4, h5 {
       align-items: center;
       color: cornsilk;
       opacity: 1;
-      transition: 1s;
+      height: 40px;
+      //transition: 1s;
 
       &__phone {
         &:before {
@@ -107,9 +111,10 @@ h1, h2, h3, h4, h5 {
       }
     }
 
-    .hidden{
+    .hidden {
       opacity: 0;
-      transition: 1s;
+
+      margin-bottom: 100px;
     }
 
 
@@ -119,7 +124,7 @@ h1, h2, h3, h4, h5 {
       padding: 10px 0 15px;
       z-index: 1000;
       background: #fff;
-      width: 100%;
+      width: 100vw;
 
       &:after {
         content: '';
@@ -182,11 +187,12 @@ h1, h2, h3, h4, h5 {
     .fixed {
       position: fixed;
       top: 0;
-     /* padding: 25px 0;*/
+      /* padding: 25px 0;*/
 
 
-      box-shadow: 0 0 5px rgba(0,0,0,0.5);
-      &:after{
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+
+      &:after {
         display: none;
       }
     }
@@ -208,92 +214,47 @@ h1, h2, h3, h4, h5 {
   }
 
   &__body {
-  /*  .slider {
-      color: #fff;
-      position: relative;
-
+    .slider {
       .slide {
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-        //height: calc(100vh - 260px);
         position: relative;
 
-        .slide__overlay {
-          position: absolute;
+        &__overlay {
           width: 100%;
           height: 100%;
-          background-color: rgba(0, 0, 0, 0.5);
-        }
-
-        .slide__body {
-          background-color: rgba(255, 255, 255, 0.8);
-          color: #000;
-          max-width: 520px;
-          position: absolute;
-          top: 40%;
-          left: calc(50% - 250px);
-          padding: 25px 40px;
-          border-radius: 25px;
-
-          .slide__header {
-            font-size: 30px;
-            text-align: center;
-          }
-
-          .slide__text {
-            padding: 20px 0;
-            font-size: 18px;
-            line-height: 1.3;
-          }
-        }
-      }
-
-      .slide1 {
-        background-image: url(../img/slide-photo-cut.jpg);
-      }
-
-      .slide2 {
-        background-image: url(../img/slide-photo.jpg);
-      }
-
-
-    }*/
-    .slider{
-      .slide{
-        position: relative;
-        &__overlay{
-          width: 100%;
-          height: 100%;
-          background: rgba(0,0,0,0.5);
+          background: rgba(0, 0, 0, 0.5);
           position: absolute;
           display: flex;
           justify-content: center;
           align-items: center;
         }
-        img{
+
+        img {
           max-width: 100%;
         }
-        &__body{
+
+        &__body {
           position: absolute;
-          margin:  auto;
-          top:50%;
+          margin: auto;
+          top: 50%;
           transform: translateY(-50%) translateX(-50%);
-          left:50%;
-          color:#fff;
+          left: 50%;
+          color: #fff;
         }
-        &__header{
+
+        &__header {
           text-align: center;
           font-size: 30px;
 
         }
-        &__text{
+
+        &__text {
           padding: 20px 0;
           text-align: justify;
           font-size: 20px;
           line-height: 1.5;
         }
       }
+
       .slickArrow {
         position: absolute;
         z-index: 100;
@@ -302,9 +263,9 @@ h1, h2, h3, h4, h5 {
         text-align: center;
 
         &:hover {
-          i{
+          i {
             transition: 0.4s;
-            color:lighten($grey-color, 30%)
+            color: lighten($grey-color, 30%)
           }
         }
 
@@ -339,6 +300,18 @@ h1, h2, h3, h4, h5 {
     text-align: center;
     padding: 100px 50px;
     font-weight: bold;
+    position: relative;
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 65%;
+      height: 5px;
+      width: 6vw;
+      background: #388e3c;
+      left: calc(50% - 3vw);
+    }
   }
 
   .about-us {
@@ -411,6 +384,34 @@ h1, h2, h3, h4, h5 {
     }
   }
 
+  .doctors {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 100px;
+
+    .doctor {
+      max-width: 400px;
+      padding: 0 50px;
+
+      &__img {
+        max-width: 100%;
+        display: block;
+      }
+
+      &__name {
+        padding-top: 20px;
+        font-size: 25px;
+        text-align: center;
+      }
+
+      &__info {
+        font-size: 22px;
+        text-align: center;
+        padding-top: 15px;
+      }
+    }
+  }
+
   .news {
     padding-bottom: 100px;
 
@@ -450,4 +451,55 @@ h1, h2, h3, h4, h5 {
       }
     }
   }
+
+  .contact-us{
+    display: flex;
+
+    .map{
+      width:50vw;
+      height:500px;
+      margin: 50px auto;
+    }
+
+    .form{
+      margin: 5vh auto 0;
+      display: flex;
+      flex-direction: column;
+      width: 30vw;
+
+
+      label{
+        font-size: 18px;
+        font-weight: bold;
+        display: flex;
+        flex-direction: column;
+        color: #000000;
+      }
+
+      input, textarea{
+        padding: 6px 12px;
+        font-size: 16px;
+        line-height: 1.428571429;
+        color: #555555;
+        background-color: #fff;
+        background-image: none;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        margin: 10px 0;
+
+        &:focus {
+          border: 2px solid lighten($main-color, 20%);
+          box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,0.6);
+        }
+
+      }
+      textarea{
+
+      }
+    }
+  }
+}
+.footer{
+  padding: 20px 0 20px 20vw;
+  background: $grey-color;
 }

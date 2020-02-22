@@ -10,24 +10,13 @@
 
     <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
-    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/zero.css">
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
 <header class="header">
-<!--    <div class="header__top">-->
-<!--        <div class="logo">-->
-<!--            <a href="#"><img src="img/logo.jpg" alt="logo"></a>-->
-<!--        </div>-->
-<!--        <h1 class="header__title">-->
-<!--            Центр підшлункової залози <br> та експертної хірургії-->
-<!--        </h1>-->
-<!--        <h2 class="header__sub-title">-->
-<!--            Лікувально-консультаційний <br> центр проф. Каніковського О.Є.-->
-<!--        </h2>-->
-<!--    </div>-->
     <div class="header-top">
         <div class="contact-info">
             <div class="contact-info__left">
@@ -94,29 +83,6 @@
                     <button class="main-btn">Детальніше</button>
                 </div>
             </div>
-
-<!--            <div class="slide slide1">
-&lt;!&ndash;                <div class="slide__overlay"></div>&ndash;&gt;
-&lt;!&ndash;                <div class="slide__body">&ndash;&gt;
-&lt;!&ndash;                    <h2 class="slide__header">Лікарський заголовок</h2>&ndash;&gt;
-&lt;!&ndash;                    <p class="slide__text">&ndash;&gt;
-&lt;!&ndash;                                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut fuga fugiat illo ipsum optio quam ratione, totam. Animi eos in repellendus velit? Dolores facilis incidunt ipsa molestias nesciunt omnis voluptate?&ndash;&gt;
-&lt;!&ndash;                                Labore nisi omnis quos? Ad dicta dolorem, eaque ipsa iste laboriosam nam nostrum nulla obcaecati odio odit officia omnis repellendus saepe sit tenetur voluptatum! Esse maiores obcaecati reiciendis repellat veritatis.</span>&ndash;&gt;
-&lt;!&ndash;                    </p>&ndash;&gt;
-&lt;!&ndash;                    <button class="main-btn">Детальніше</button>&ndash;&gt;
-&lt;!&ndash;                </div>&ndash;&gt;
-            </div>
-            <div class="slide slide1">
-                <div class="slide__overlay"></div>
-                <div class="slide__body">
-                    <h2 class="slide__header">Лікарський заголовок</h2>
-                    <p class="slide__text">
-                                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut fuga fugiat illo ipsum optio quam ratione, totam. Animi eos in repellendus velit? Dolores facilis incidunt ipsa molestias nesciunt omnis voluptate?
-                                Labore nisi omnis quos? Ad dicta dolorem, eaque ipsa iste laboriosam nam nostrum nulla obcaecati odio odit officia omnis repellendus saepe sit tenetur voluptatum! Esse maiores obcaecati reiciendis repellat veritatis.</span>
-                    </p>
-                    <button class="main-btn">Детальніше</button>
-                </div>
-            </div>-->
         </div>
     </div>
 </header>
@@ -170,6 +136,23 @@
         </div>
         <button class="main-btn">Більше послуг</button>
     </section>
+    <section class="doctors">
+        <div class="doctor">
+            <img src="img/doctor1.jpg" alt="doctor img" class="doctor__img">
+            <h4 class="doctor__name">Іванов Іван Іванович</h4>
+            <p class="doctor__info">Лікар хірург</p>
+        </div>
+        <div class="doctor">
+            <img src="img/doctor1.jpg" alt="doctor img" class="doctor__img">
+            <h4 class="doctor__name">Іванов Іван Іванович</h4>
+            <p class="doctor__info">Лікар хірург</p>
+        </div>
+        <div class="doctor">
+            <img src="img/doctor1.jpg" alt="doctor img" class="doctor__img">
+            <h4 class="doctor__name">Іванов Іван Іванович</h4>
+            <p class="doctor__info">Лікар хірург</p>
+        </div>
+    </section>
     <section class="news background-section">
         <h2 class="section-header">
             Новини
@@ -192,18 +175,41 @@
             </div>
         </div>
     </section>
+    <section class="contact-us">
+        <div class="map">
 
+        </div>
+        <form action="" class="form">
+            <label>
+                Ім'я
+                <input type="text">
+            </label>
+            <label>
+                Телефон
+                <input class="phone" placeholder="+38 (___)___-__-__" type="text" value="+38">
+            </label>
+            <label>
+                E-mail
+                <input type="email">
+            </label>
+            <label>
+                Повідомлення
+                <textarea rows="5" cols="45"></textarea>
+            </label>
+            <button type="submit" class="main-btn">Записатись на прийом</button>
+        </form>
+    </section>
 </main>
 
 
 <footer class="footer">
-
+<p>© The Shchipskii Brothers Company. All Rights Reserved.</p>
 </footer>
-
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="slick/slick.min.js"></script>
 <script type="text/javascript" src="scripts/sliders.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTjJ9ulK1L7xAS69AJI0YoiVdSpbNU9r8&callback=initMap"></script>
 <script src="scripts/scripts.js"></script>
 </body>
 </html>
