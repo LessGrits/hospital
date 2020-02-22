@@ -465,7 +465,7 @@ h1, h2, h3, h4, h5 {
       margin: 5vh auto 0;
       display: flex;
       flex-direction: column;
-      width: 20vw;
+      width: 25vw;
 
 
     /*  input:focus:invalid, .choose_form select:focus:invalid{
@@ -511,11 +511,12 @@ h1, h2, h3, h4, h5 {
   }
 }
 .footer{
-  padding: 20px 0 20px 20vw;
+  padding: 20px 0;
   background: $grey-color;
 
   p{
     color: #fff;
     font-size: 17px;
+    text-align: center;
   }
 }
