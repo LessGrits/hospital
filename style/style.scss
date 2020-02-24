@@ -433,12 +433,14 @@ h1, h2, h3, h4, h5 {
 
     .news__list {
       display: flex;
-      flex-wrap: wrap;
+      //flex-wrap: wrap;
       justify-content: center;
+      align-items: center;
 
       .one-news {
         margin: 20px;
-        min-width: 200px;
+        min-width: 300px;
+        width: 30%;
         max-width: 510px;
         position: relative;
         cursor: pointer;
@@ -464,7 +466,42 @@ h1, h2, h3, h4, h5 {
           line-height: 1.5;
         }
       }
+
+      .facebook-window{
+        width: 30%;
+        margin: 20px;
+        max-width: 510px;
+      }
+
+      @media all and (max-width: 1600px) {
+        .facebook-window{
+          max-width: 400px;
+          iframe{
+
+            width: 300px ;
+          }
+        }
+      }
+      @media all and (max-width: 1300px) {
+        .facebook-window {
+          max-width: 300px;
+          max-height: 300px;
+          iframe {
+
+            max-height: 300px;
+            width: 200px;
+          }
+        }
+      }
     }
+    @media all and (max-width: 1300px) {
+      .news__list{
+        flex-wrap: wrap;
+        .one-news:first-child{
+          display: none;
+        }
+    }
+  }
   }
 
   .contact-us{
