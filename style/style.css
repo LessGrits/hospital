@@ -308,10 +308,19 @@ h1, h2, h3, h4, h5 {
         -o-transition: 0.4s;
         transition: 0.4s;
         color: #388e3c; }
+      .main .services__body .service:hover .service__img-cover {
+        border-color: #388e3c; }
+      .main .services__body .service:hover .service__img {
+        -webkit-filter: invert(43%) sepia(72%) saturate(407%) hue-rotate(73deg) brightness(92%) contrast(90%);
+        filter: invert(43%) sepia(72%) saturate(407%) hue-rotate(73deg) brightness(92%) contrast(90%); }
+      .main .services__body .service__img-cover {
+        border: 2px solid #808080;
+        border-radius: 50%; }
       .main .services__body .service__img {
         display: block;
         margin: 0 auto;
-        max-width: 100%; }
+        max-width: 200px;
+        padding: 20px; }
       .main .services__body .service__title {
         text-align: center;
         padding-top: 20px;

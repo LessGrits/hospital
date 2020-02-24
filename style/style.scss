@@ -366,12 +366,28 @@ h1, h2, h3, h4, h5 {
             transition: 0.4s;
             color: $main-color;
           }
+
+          .service__img-cover{
+            border-color: $main-color;
+          }
+
+
+          .service__img{
+            filter: invert(43%) sepia(72%) saturate(407%) hue-rotate(73deg) brightness(92%) contrast(90%);
+          }
+        }
+
+        &__img-cover{
+          border: 2px solid $grey-color;
+          border-radius: 50%;
         }
 
         &__img {
           display: block;
           margin: 0 auto;
-          max-width: 100%;
+           max-width: 200px;
+          padding: 20px;
+
         }
 
         &__title {
