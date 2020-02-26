@@ -1,6 +1,14 @@
 const menu = document.querySelector('.header-top__body');
 const contactInfo = document.querySelector('.contact-info');
+const menuBtn = document.querySelector('.menu__item_btn');
+const menuItems = document.querySelectorAll('.menu__item');
 
+menuBtn.addEventListener('click',()=>{
+    for(let item of menuItems){
+        item.classList.toggle('hide');
+    }
+    menuItems.classList.toggle('hide');
+});
 
 
 var map;
@@ -32,9 +40,10 @@ google.maps.event.addDomListener(window, 'load', initialize);
 addEventListener("scroll", ()=> {
     const scrolled = document.scrollingElement.scrollTop;
     const position = menu.offsetTop;
-    scrolled >= position + 10 && (menu.classList.add('fixed') , contactInfo.classList.add('hidden'));
-    scrolled === 0 && (menu.classList.remove('fixed') , contactInfo.classList.remove('hidden'));
+    scrolled >= position  && (menu.classList.add('fixed') , contactInfo.classList.add('hidden'));
+    scrolled <= 40 && (menu.classList.remove('fixed') , contactInfo.classList.remove('hidden'));
 });
+
 
 let phoneInput = document.querySelector('.phone')
 phoneInput.addEventListener('keydown', function(event) {

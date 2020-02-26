@@ -50,7 +50,7 @@ h1, h2, h3, h4, h5 {
 
 
     .contact-info {
-      padding: 5px calc(50% - 700px);
+      padding: 0 calc(50% - 700px);
       display: flex;
       width: 100%;
       background: $grey-color;
@@ -62,6 +62,7 @@ h1, h2, h3, h4, h5 {
       //transition: 1s;
 
       &__phone {
+        padding-left: 20px;
         &:before {
           font-family: iconmonstr-iconic-font;
           content: '\e06d';
@@ -112,16 +113,15 @@ h1, h2, h3, h4, h5 {
     }
 
     .hidden {
-      opacity: 0;
-
-      margin-bottom: 100px;
+     opacity: 0;
+      margin-bottom: 66px;
     }
 
 
     &__body {
       display: flex;
       justify-content: center;
-      padding: 10px 0 15px;
+      padding: 5px 0 10px;
       z-index: 1000;
       background: #fff;
       width: 100vw;
@@ -137,11 +137,12 @@ h1, h2, h3, h4, h5 {
       }
 
       .logo {
-        width: 80px;
+        width: 50px;
 
         img {
           display: block;
           max-width: 100%;
+          min-width: 40px;
         }
       }
 
@@ -150,25 +151,28 @@ h1, h2, h3, h4, h5 {
         justify-content: center;
         padding-left: 50px;
 
-        a {
+        .menu__item,  .menu__item_btn {
           text-transform: uppercase;
-          font-size: 16px;
+          font-size: 14px;
           font-weight: bold;
           color: #424242;
           display: inline-block;
-          padding: 30px 0.7vw;
+          padding: 22px 0.7vw;
           position: relative;
-          //&:active{
-          //  background: darken($main-color, 25%);
-          //  color: darken(#fff, 50%);
-          //  transition: 0.4s;
-          //}
+          opacity: 1;
+          transition: 0.5s;
         }
+
+        .menu__item_btn{
+          display: none;
+        }
+
+
 
         a:hover, .active-link {
           //background: lighten($main-color, 50%);
           color: $main-color;
-          transition: 1s;
+          transition: 0.4s;
 
 
           &:before {
@@ -187,8 +191,11 @@ h1, h2, h3, h4, h5 {
     .fixed {
       position: fixed;
       top: 0;
-      /* padding: 25px 0;*/
+      padding: 5px 0;
 
+      .header-top__body{
+        padding: 0;
+      }
 
       box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 
@@ -308,9 +315,10 @@ h1, h2, h3, h4, h5 {
       position: absolute;
       top: 65%;
       height: 5px;
-      width: 6vw;
+
+      width: 100px;
       background: lighten($main-color,15%);
-      left: calc(50% - 3vw);
+      left: calc(50% - 50px);
     }
   }
 
@@ -356,13 +364,18 @@ h1, h2, h3, h4, h5 {
 
       .service {
 
-        min-width: 240px;
+        min-width: 150px;
         padding: 20px;
-        max-width: 15%;
+        width: 15%;
+        max-width: 250px;
         cursor: pointer;
 
+        a{
+          color: #000;
+        }
+
         &:hover {
-          .service__title {
+          a {
             transition: 0.4s;
             color: $main-color;
           }
@@ -378,14 +391,14 @@ h1, h2, h3, h4, h5 {
         }
 
         &__img-cover{
-          border: 2px solid $grey-color;
+          border: 4px solid $grey-color;
           border-radius: 50%;
         }
 
         &__img {
           display: block;
           margin: 0 auto;
-           max-width: 200px;
+           max-width: 100%;
           padding: 20px;
 
         }
@@ -401,31 +414,36 @@ h1, h2, h3, h4, h5 {
   }
 
   .doctors {
-    display: flex;
-    justify-content: center;
     padding-bottom: 100px;
 
-    .doctor {
-      max-width: 400px;
-      padding: 0 50px;
+    &-list{
+      display: flex;
+      justify-content: center;
 
-      &__img {
-        max-width: 100%;
-        display: block;
-      }
+      .doctor {
+        max-width: 400px;
+        padding: 0 50px;
 
-      &__name {
-        padding-top: 20px;
-        font-size: 25px;
-        text-align: center;
-      }
+        &__img {
+          max-width: 100%;
+          display: block;
+        }
 
-      &__info {
-        font-size: 22px;
-        text-align: center;
-        padding-top: 15px;
+        &__name {
+          padding-top: 20px;
+          font-size: 25px;
+          text-align: center;
+        }
+
+        &__info {
+          font-size: 22px;
+          text-align: center;
+          padding-top: 15px;
+        }
       }
     }
+
+
   }
 
   .news {
@@ -468,7 +486,7 @@ h1, h2, h3, h4, h5 {
       }
 
       .facebook-window{
-        width: 30%;
+        width: 100%;
         margin: 20px;
         max-width: 510px;
       }
@@ -477,31 +495,47 @@ h1, h2, h3, h4, h5 {
         .facebook-window{
           max-width: 400px;
           iframe{
-
             width: 300px ;
           }
         }
       }
-      @media all and (max-width: 1300px) {
-        .facebook-window {
-          max-width: 300px;
-          max-height: 300px;
-          iframe {
+      //@media all and (max-width: 1300px) {
+      //  .facebook-window {
+      //    max-width: 300px;
+      //    max-height: 300px;
+      //    iframe {
+      //
+      //      max-height: 300px;
+      //      width: 200px;
+      //    }
+      //  }
+      //}
 
-            max-height: 300px;
-            width: 200px;
+    }
+    @media all and (max-width: 1300px) {
+      .news__list{
+        .one-news{
+          width: 45vw;
+          min-width: 490px;
+        }
+
+        .one-news:first-child{
+          display: none;
+        }
+        .facebook-window{
+          max-width: 510px;
+          iframe{
+            margin: 0 auto;
+            width: 400px ;
           }
         }
       }
     }
-    @media all and (max-width: 1300px) {
+    @media all and (max-width: 1100px) {
       .news__list{
-        flex-wrap: wrap;
-        .one-news:first-child{
-          display: none;
-        }
+        flex-direction: column;
+      }
     }
-  }
   }
 
   .contact-us{
@@ -517,7 +551,8 @@ h1, h2, h3, h4, h5 {
       margin: 5vh auto 0;
       display: flex;
       flex-direction: column;
-      width: 25vw;
+      width: 40vw;
+      max-width: 400px;
 
 
     /*  input:focus:invalid, .choose_form select:focus:invalid{
@@ -572,3 +607,170 @@ h1, h2, h3, h4, h5 {
     text-align: center;
   }
 }
+
+
+
+@media only screen and (max-width: 1200px) {
+        .main-btn {
+          padding: 10px 30px;
+          font-size: 15px;
+        }
+
+  .header__body{
+    .slider{
+      .slide__text{
+        font-size: 18px;
+        line-height: 1.2;
+      }
+    }
+  }
+
+
+  .main  {
+    .section-header{
+      font-size: 30px;
+      padding: 70px 50px;
+    }
+
+    .about-us__text{
+      font-size: 16px;
+    }
+
+    .services__body  {
+      .service__title{
+        padding-top: 15px;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .header__body{
+    .slider{
+      .slide__text{
+        font-size: 16px;
+        line-height: 1.2;
+      }
+    }
+  }
+
+  .main{
+    .about-us__body{
+      flex-direction: column-reverse;
+    }
+    .about-us__text{
+      width: 80vw;
+      padding-bottom: 30px;
+    }
+    .about-us__img{
+      width: 80vw;
+    }
+
+    .services__body{
+      .service{
+        width: 30%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 770px) {
+
+.header-top {
+  .header-top__body {
+    padding: 0;
+    position: relative;
+
+    &:after {
+      display: none;
+    }
+
+    .logo {
+      position: absolute;
+      z-index: 101;
+      left: 10px;
+      width: 45px;
+      top: 5px;
+    }
+
+    .menu {
+      top: 40px;
+      left: 0;
+      display: block;
+      //position: fixed;
+      z-index: 100;
+      background: #fff;
+      width: 100vw;
+      padding: 0;
+
+      .menu__item, .menu__item_btn {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid $grey-color;
+
+        &:hover, .active-link {
+          &:before {
+            display: none;
+          }
+        }
+
+      }
+
+      .menu__item:last-child {
+        margin-bottom: 300px;
+      }
+
+      .menu__item_btn {
+        display: block;
+        text-align: center;
+
+        padding: 15px 0;
+
+        &:hover, .active-link {
+          color: $main-color;
+        }
+      }
+
+      .hide {
+        opacity: 0;
+        transition: 0.5s;
+        display: none;
+      }
+    }
+
+    .open {
+      height: 100vh;
+    }
+  }
+
+  .fixed {
+    position: fixed;
+    padding: 0;
+  }
+}
+  .main {
+  .contact-us{
+    flex-direction: column-reverse;
+
+    .map{
+      width: 85vw;
+    }
+  }
+  }
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+
+
+
