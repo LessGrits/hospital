@@ -496,6 +496,35 @@ h1, h2, h3, h4, h5 {
         box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6); }
     .main .contact-us__body .form .main-btn {
       margin-top: 20px; }
+    .main .contact-us__body .form .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.3);
+      z-index: 10000; }
+      .main .contact-us__body .form .modal-content {
+        width: 80%;
+        max-width: 400px;
+        padding: 40px 0;
+        background: #5cb85c;
+        margin: 50%  auto;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 28px;
+        font-weight: bold;
+        color: #fff; }
+      .main .contact-us__body .form .modal .error {
+        background: tomato; }
+    .main .contact-us__body .form .show {
+      display: block; }
 
 .footer {
   padding: 20px 0;
@@ -600,10 +629,6 @@ h1, h2, h3, h4, h5 {
         .header-top .header-top__body .menu .menu__item_btn:hover, .header-top .header-top__body .menu .menu__item_btn .active-link {
           color: #388e3c; }
       .header-top .header-top__body .menu .hide {
-        opacity: 0;
-        -webkit-transition: 0.5s;
-        -o-transition: 0.5s;
-        transition: 0.5s;
         display: none; }
     .header-top .header-top__body .open {
       height: 100vh; }

@@ -236,28 +236,32 @@
             Контакти
         </h2>
         <div class="contact-us__body">
-
         <div class="map">
-
         </div>
-        <form action="" class="form">
+        <form action="javascript:void(0)" class="form" id="form">
             <label>
                 ПІБ*
-                <input required type="text">
+                <input value="Давидюк Тамара Петрівна" type="text">
             </label>
             <label>
                 Телефон*
-                <input required class="phone" placeholder="+38 (___)___-__-__" type="text" minlength="13" value="+38">
+                <input class="phone" placeholder="+38 (___)___-__-__" type="text" value="+380685139216">
             </label>
             <label>
                 E-mail*
-                <input required type="email">
+                <input value="tamara-petrovna@gmail.com" type="email">
             </label>
             <label>
                 Повідомлення
-                <textarea rows="7" cols="45"></textarea>
+                <textarea rows="7" cols="45" >Потребую в обстеженні</textarea>
             </label>
-            <button type="submit" class="main-btn">Записатись на прийом</button>
+            <button type="submit" id="submitForm"  class="main-btn">Записатись на прийом</button>
+            <div class="modal" id="modalWindow">
+                <div class="modal-content ">
+                    Ваш лист відправлено
+                </div>
+            </div>
+
         </form>
         </div>
     </section>
