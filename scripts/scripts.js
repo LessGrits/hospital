@@ -91,7 +91,7 @@ submitForm.onclick = () => {
         modalContent.classList.remove("error");
         Array.from(form.elements).map((input) => input.value = '');
     }else{
-        modalContent.innerHTML = `<span>Неправильно введені дані</span>` ;
+        modalContent.innerHTML = `<span>Неправильно введені дані!</span>` ;
         modalContent.classList.add("error");
 
     }

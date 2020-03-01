@@ -644,9 +644,10 @@ h1, h2, h3, h4, h5 {
           z-index: 10000;
 
           &-content {
+            border-radius: 10px;
             width: 80%;
             max-width: 400px;
-            padding: 40px 0 20px;
+            padding: 60px 0 20px;
             background: #fff;
             //border: 10px solid $main-color;
             margin: 50vh auto;
@@ -666,8 +667,8 @@ h1, h2, h3, h4, h5 {
               &:after {
                 position: absolute;
                 display: block;
-                top:10px;
-                left: calc( 50% - 5px);
+                top:20px;
+                left: calc( 50% - 15px);
                 content: '\e023';
                 font-size: 35px;
                 font-family: iconmonstr-iconic-font;
@@ -682,8 +683,8 @@ h1, h2, h3, h4, h5 {
             span:after {
               position: absolute;
               display: block;
-              top:10px;
-              left: calc( 50% - 5px);
+              top:20px;
+              left: calc( 50% - 15px);
               font-size: 35px;
               content: '\e08c';
               font-family: iconmonstr-iconic-font;
