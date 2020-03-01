@@ -508,9 +508,9 @@ h1, h2, h3, h4, h5 {
       .main .contact-us__body .form .modal-content {
         width: 80%;
         max-width: 400px;
-        padding: 40px 0;
-        background: #5cb85c;
-        margin: 50vh  auto;
+        padding: 40px 0 20px;
+        background: #fff;
+        margin: 50vh auto;
         -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
         transform: translateY(-50%);
@@ -520,9 +520,31 @@ h1, h2, h3, h4, h5 {
         font-family: Arial, Helvetica, sans-serif;
         font-size: 28px;
         font-weight: bold;
-        color: #fff; }
+        color: #000;
+        position: relative; }
+        .main .contact-us__body .form .modal-content span {
+          padding-top: 20px;
+          display: block; }
+          .main .contact-us__body .form .modal-content span:after {
+            position: absolute;
+            display: block;
+            top: 10px;
+            left: calc( 50% - 5px);
+            content: '\e023';
+            font-size: 35px;
+            font-family: iconmonstr-iconic-font;
+            color: #388e3c; }
       .main .contact-us__body .form .modal .error {
-        background: tomato; }
+        font-size: 25px; }
+        .main .contact-us__body .form .modal .error span:after {
+          position: absolute;
+          display: block;
+          top: 10px;
+          left: calc( 50% - 5px);
+          font-size: 35px;
+          content: '\e08c';
+          font-family: iconmonstr-iconic-font;
+          color: tomato; }
     .main .contact-us__body .form .show {
       display: block; }
 

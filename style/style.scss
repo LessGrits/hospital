@@ -633,37 +633,64 @@ h1, h2, h3, h4, h5 {
           margin-top: 20px;
         }
 
-        .modal{
+        .modal {
           display: none;
           position: fixed;
-          top:0;
-          left:0;
+          top: 0;
+          left: 0;
           width: 100vw;
           height: 100vh;
-          background: rgba(0,0,0,0.3);
+          background: rgba(0, 0, 0, 0.3);
           z-index: 10000;
 
-          &-content{
+          &-content {
             width: 80%;
             max-width: 400px;
-            padding: 40px 0;
-            background: #5cb85c;
-            margin:50vh  auto;
+            padding: 40px 0 20px;
+            background: #fff;
+            //border: 10px solid $main-color;
+            margin: 50vh auto;
             transform: translateY(-50%);
-            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
             text-align: center;
             font-family: Arial, Helvetica, sans-serif;
             font-size: 28px;
             font-weight: bold;
-            color:#fff;
+            color: #000;
+            position: relative;
+
+            span{
+              padding-top: 20px;
+              display: block;
+
+              &:after {
+                position: absolute;
+                display: block;
+                top:10px;
+                left: calc( 50% - 5px);
+                content: '\e023';
+                font-size: 35px;
+                font-family: iconmonstr-iconic-font;
+                color: $main-color;
+              }
+            }
+
           }
 
-          .error{
-            background: tomato;
+          .error {
+            font-size: 25px;
+            span:after {
+              position: absolute;
+              display: block;
+              top:10px;
+              left: calc( 50% - 5px);
+              font-size: 35px;
+              content: '\e08c';
+              font-family: iconmonstr-iconic-font;
+              color: tomato;
+            }
           }
-
         }
-        
         .show{
           display: block;
         }
@@ -798,8 +825,6 @@ h1, h2, h3, h4, h5 {
           display: none;
         }
       }
-
-
 
     .header-top__body {
       padding: 0;

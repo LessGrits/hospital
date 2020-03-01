@@ -86,15 +86,12 @@ submitForm.onclick = () => {
     // console.log(form.elements[0].value.length >= 5);
     // console.log(form.elements[1].value.length === 13);
     // console.log(form.elements[2].value.search(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)>=0);
-
+    modalWindow.classList.add('show');
     if(form.elements[0].value.length >= 5 && form.elements[1].value.length >= 13 &&form.elements[2].value.search(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)>=0){
-
-        modalWindow.classList.add('show');
+        modalContent.classList.remove("error");
         Array.from(form.elements).map((input) => input.value = '');
     }else{
-
-        modalWindow.classList.add('show');
-        modalContent.innerText = "Некоректне введення";
+        modalContent.innerHTML = `<span>Неправильно введені дані</span>` ;
         modalContent.classList.add("error");
 
     }
